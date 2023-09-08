@@ -1,6 +1,7 @@
 import React from 'react';
 import { Stack } from '@mui/material';
 import Logo from '../assets/Logo.png';
+import {Link as LinkS} from 'react-scroll' ;
 import {Link} from 'react-router-dom' ;
 
 
@@ -16,8 +17,8 @@ const Navbar = () => (
      fontFamily="Alegreya"
      fontSize="24px"
      alignItems="flex-end">
-      <Link to='/' style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Home</Link>
-      <a href='#exercises' style={{ textDecoration: 'none', color: '#3A1212' }}>exercises</a>
+      <Link to='/' className={'navitems'}>Home</Link>
+      <LinkS to='exercises' className={'navitems'} spy={true} smooth={true} offset={30} duration={500 }  >Exercises</LinkS>
     </Stack>
   </Stack>
 )
